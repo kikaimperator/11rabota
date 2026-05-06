@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.myproject.hzhzhz2.HelloController">
+  <tabs>
+    <Tab text="1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: black;">
+               <children>
+                  <Circle fx:id="Circle" layoutX="475.0" layoutY="231.0" onMouseClicked="#OnMouseClick" onScroll="#OnScroll" radius="100.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.7265714406967163" green="1.0" blue="0.12999999523162842" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Line fx:id="Line" endX="100.0" layoutX="158.0" layoutY="55.0" onMouseDragged="#LineMouseDragget" onMousePressed="#LineMousePressed" onScroll="#OnScroll" startX="-100.0">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.13425925374031067" blue="0.13425925374031067" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Line>
+                  <Rectangle fx:id="Rectangle" arcHeight="5.0" arcWidth="5.0" height="200.0" layoutX="37.0" layoutY="119.0" onMouseExited="#OnMouseExited" onMouseMoved="#OnMouseMoved" onScroll="#OnScroll" stroke="BLACK" strokeType="INSIDE" width="112.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.5131579041481018" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="2">
+      <content>
+        <AnchorPane fx:id="pane" minHeight="0.0" minWidth="0.0" onMouseClicked="#PaneClick" onMouseDragged="#PaneDragged" onMousePressed="#Panepressed" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: black;">
+               <children>
+                  <SplitMenuButton fx:id="color" layoutX="31.0" layoutY="32.0" mnemonicParsing="false" text="Цвет">
+                    <items>
+                      <MenuItem fx:id="red" mnemonicParsing="false" onAction="#Actionred" text="красный" />
+                      <MenuItem fx:id="black" mnemonicParsing="false" onAction="#Actionblack" text="чёрный" />
+                        <MenuItem fx:id="blue" mnemonicParsing="false" onAction="#Actionblue" text="синий" />
+                    </items>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.46052631735801697" blue="0.34539473056793213" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </SplitMenuButton>
+                  <SplitMenuButton fx:id="form" layoutX="220.0" layoutY="32.0" mnemonicParsing="false" text="Фигура">
+                    <items>
+                      <MenuItem fx:id="menuCircle" mnemonicParsing="false" onAction="#actionmenuCircle" text="Круг" />
+                      <MenuItem fx:id="menuLine" mnemonicParsing="false" onAction="#ActionmenuLine" text="Линия" />
+                        <MenuItem fx:id="menurectangle" mnemonicParsing="false" onAction="#Actionmenurectangle" text="Прямоугольник" />
+                    </items>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6447368264198303" green="0.0208942499011755" blue="0.0208942499011755" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </SplitMenuButton>
+                  <Slider fx:id="Slider" layoutX="418.0" layoutY="38.0" style="-fx-background-color: black;" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="tabpane3" text="3">
+         <content>
+            <AnchorPane fx:id="pane3" minHeight="0.0" minWidth="0.0" onMouseDragged="#ActionDraggedpane3" onMousePressed="#ActionPressedpane3" onScroll="#Scrollpane3" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: black;">
+               <children>
+                  <Box fx:id="box1" depth="100" height="100" layoutX="300.0" layoutY="186.0" width="100" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
